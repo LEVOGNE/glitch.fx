@@ -4,6 +4,7 @@ A revised version of Powerglitch 2.3.2 has been rewritten in TypeScript and adap
 
 ## Import and Usage in Nuxt3/4
 
+```vue
 <script setup lang="ts">
 import { PowerGlitch } from "@/utils/glitch.fx";
 const logoRef = ref<HTMLImageElement | null>(null);
