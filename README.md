@@ -42,7 +42,7 @@ img {
   overflow: hidden;
 }
 </style>
-```vue
+```
 
 ## PowerGlitch
 
