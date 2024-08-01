@@ -18,7 +18,6 @@ onMounted(() => {
       <img
         ref="logoRef"
         src="~/assets/YOURIMAGE.png"
-        alt="LE Signs Logo"
       />
     </NuxtLink>
   </div>
