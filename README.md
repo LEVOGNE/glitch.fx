@@ -108,6 +108,7 @@ The glitch effect is regenerated on each hover event, providing more variation t
 
 ### Example
 
+```
 PowerGlitch.glitch('.logo', {
   playMode: 'hover',
   createContainers: true,
@@ -123,5 +124,6 @@ PowerGlitch.glitch('.logo', {
     hueRotate: true,
   },
 });
+```
 
 This example applies a hover-activated glitch effect to all elements with the class logo.
