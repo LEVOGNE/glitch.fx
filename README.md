@@ -4,7 +4,6 @@ A revised version of Powerglitch 2.3.2 has been rewritten in TypeScript and adap
 
 ## Import and Usage in Nuxt3/4
 
-```vue
 <script setup lang="ts">
 import { PowerGlitch } from "@/utils/glitch.fx";
 const logoRef = ref<HTMLImageElement | null>(null);
@@ -43,49 +42,72 @@ img {
   overflow: hidden;
 }
 </style>
-PowerGlitch
+
+## PowerGlitch
+
 PowerGlitch is a TypeScript library that provides a customizable glitch effect for HTML elements.
-Installation
+
+### Installation
+
 [Add installation instructions here, e.g., via npm or yarn]
-Usage
+
+### Usage
+
 Import PowerGlitch into your file:
-typescriptCopyimport { PowerGlitch } from './path/to/glitch.fx';
+
+import { PowerGlitch } from './path/to/glitch.fx';
+
 Apply the glitch effect to an element:
-typescriptCopyPowerGlitch.glitch('.my-element', options);
-Modes
+
+PowerGlitch.glitch('.my-element', options);
+
+### Modes
+
 PowerGlitch supports three different modes:
 
-always: The glitch effect is applied continuously.
-hover: The glitch effect is activated when the user hovers over the element.
-click: The glitch effect is activated when the user clicks on the element.
+1. always: The glitch effect is applied continuously.
+2. hover: The glitch effect is activated when the user hovers over the element.
+3. click: The glitch effect is activated when the user clicks on the element.
 
 Example:
-typescriptCopyPowerGlitch.glitch('.my-element', { playMode: 'hover' });
-Options
+
+PowerGlitch.glitch('.my-element', { playMode: 'hover' });
+
+### Options
+
 You can customize various options, including:
 
-createContainers: Creates container elements for the effect (default: true)
-hideOverflow: Hides overflow (default: false)
-timing: Duration and iterations of the effect
-glitchTimeSpan: Start and end time of the glitch effect
-shake: Speed and amplitude of the shake effect
-slice: Number, speed, height, and color rotation of the slice effects
-pulse: Scaling for the pulse effect
+- createContainers: Creates container elements for the effect (default: true)
+- hideOverflow: Hides overflow (default: false)
+- timing: Duration and iterations of the effect
+- glitchTimeSpan: Start and end time of the glitch effect
+- shake: Speed and amplitude of the shake effect
+- slice: Number, speed, height, and color rotation of the slice effects
+- pulse: Scaling for the pulse effect
 
-Turning Off the Effect on Click
+### Turning Off the Effect on Click
+
 To turn off the effect after a click, add the CSS class router-link-active or router-link-exact-active to the link element within the glitch element. Additionally, set pointer-events: none; on the element.
+
 Example:
-htmlCopy<div class="glitch-element">
+
+<div class="glitch-element">
   <a class="router-link-active" href="#">Link Text</a>
 </div>
-cssCopy.glitch-element a.router-link-active {
+
+.glitch-element a.router-link-active {
   pointer-events: none;
 }
+
 With these classes and CSS properties, the glitch effect will automatically deactivate when the link is active.
-Renewing the Effect
+
+### Renewing the Effect
+
 The glitch effect is regenerated on each hover event, providing more variation to the effect.
-Example
-typescriptCopyPowerGlitch.glitch('.logo', {
+
+### Example
+
+PowerGlitch.glitch('.logo', {
   playMode: 'hover',
   createContainers: true,
   hideOverflow: true,
@@ -100,4 +122,5 @@ typescriptCopyPowerGlitch.glitch('.logo', {
     hueRotate: true,
   },
 });
+
 This example applies a hover-activated glitch effect to all elements with the class logo.
