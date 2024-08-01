@@ -54,6 +54,7 @@ PowerGlitch is a TypeScript library that provides a customizable glitch effect f
 
 ### Usage
 
+```
 Import PowerGlitch into your file:
 
 import { PowerGlitch } from './path/to/glitch.fx';
@@ -61,6 +62,7 @@ import { PowerGlitch } from './path/to/glitch.fx';
 Apply the glitch effect to an element:
 
 PowerGlitch.glitch('.my-element', options);
+```
 
 ### Modes
 
@@ -72,7 +74,9 @@ PowerGlitch supports three different modes:
 
 Example:
 
+```
 PowerGlitch.glitch('.my-element', { playMode: 'hover' });
+```
 
 ### Options
 
@@ -92,6 +96,7 @@ To turn off the effect after a click, add the CSS class router-link-active or ro
 
 Example:
 
+```
 <div class="glitch-element">
   <a class="router-link-active" href="#">Link Text</a>
 </div>
@@ -99,6 +104,7 @@ Example:
 .glitch-element a.router-link-active {
   pointer-events: none;
 }
+```
 
 With these classes and CSS properties, the glitch effect will automatically deactivate when the link is active.
 
