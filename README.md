@@ -7,9 +7,7 @@ A revised version of Powerglitch 2.3.2 has been rewritten in TypeScript and adap
 ```vue
 <script setup lang="ts">
 import { PowerGlitch } from "@/utils/glitch.fx";
-
 const logoRef = ref<HTMLImageElement | null>(null);
-
 onMounted(() => {
   PowerGlitch.glitch(".logo_con", { playMode: "hover" });
 });
@@ -45,35 +43,24 @@ img {
   overflow: hidden;
 }
 </style>
-Important Note
 PowerGlitch
 PowerGlitch is a TypeScript library that provides a customizable glitch effect for HTML elements.
-
 Installation
 [Add installation instructions here, e.g., via npm or yarn]
-
 Usage
 Import PowerGlitch into your file:
-
-typescript
-Code kopieren
-import { PowerGlitch } from './path/to/glitch.fx';
+typescriptCopyimport { PowerGlitch } from './path/to/glitch.fx';
 Apply the glitch effect to an element:
-
-typescript
-Code kopieren
-PowerGlitch.glitch('.my-element', options);
+typescriptCopyPowerGlitch.glitch('.my-element', options);
 Modes
 PowerGlitch supports three different modes:
 
 always: The glitch effect is applied continuously.
 hover: The glitch effect is activated when the user hovers over the element.
 click: The glitch effect is activated when the user clicks on the element.
-Example:
 
-typescript
-Code kopieren
-PowerGlitch.glitch('.my-element', { playMode: 'hover' });
+Example:
+typescriptCopyPowerGlitch.glitch('.my-element', { playMode: 'hover' });
 Options
 You can customize various options, including:
 
@@ -84,31 +71,21 @@ glitchTimeSpan: Start and end time of the glitch effect
 shake: Speed and amplitude of the shake effect
 slice: Number, speed, height, and color rotation of the slice effects
 pulse: Scaling for the pulse effect
+
 Turning Off the Effect on Click
 To turn off the effect after a click, add the CSS class router-link-active or router-link-exact-active to the link element within the glitch element. Additionally, set pointer-events: none; on the element.
-
 Example:
-
-html
-Code kopieren
-<div class="glitch-element">
+htmlCopy<div class="glitch-element">
   <a class="router-link-active" href="#">Link Text</a>
 </div>
-css
-Code kopieren
-.glitch-element a.router-link-active {
+cssCopy.glitch-element a.router-link-active {
   pointer-events: none;
 }
 With these classes and CSS properties, the glitch effect will automatically deactivate when the link is active.
-
 Renewing the Effect
 The glitch effect is regenerated on each hover event, providing more variation to the effect.
-
-Example:
-
-typescript
-Code kopieren
-PowerGlitch.glitch('.logo', {
+Example
+typescriptCopyPowerGlitch.glitch('.logo', {
   playMode: 'hover',
   createContainers: true,
   hideOverflow: true,
